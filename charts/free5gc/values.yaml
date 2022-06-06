@@ -24,7 +24,7 @@ global:
       port: "8000"
       nodePort: "30800"
   sbi:
-    scheme: http
+    scheme: https
   amf:
     n2if:  # NGAP
       ipAddress: 10.100.50.249
