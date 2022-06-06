@@ -27,7 +27,7 @@ global:
     scheme: http
   amf:
     n2if:  # NGAP
-      ipAddress: 10.100.50.250
+      ipAddress: 10.100.50.249
     service:
       ngap:
         enabled: false
@@ -35,7 +35,7 @@ global:
         port: 38412
         nodeport: 31412
         protocol: SCTP
-        type: NodePort
+        type: ClusterIP
   smf:
     n4if:
       ipAddress: 10.100.50.244
