@@ -35,7 +35,7 @@ global:
         port: 38412
         nodeport: 31412
         protocol: SCTP
-        type: ClusterIP
+        type: NodePort
   smf:
     n4if:
       ipAddress: 10.100.50.244
