@@ -27,7 +27,7 @@ global:
     scheme: http
   amf:
     n2if:  # NGAP
-      ipAddress: 10.100.50.249
+      ipAddress: 10.100.50.250
     service:
       ngap:
         enabled: false
@@ -109,4 +109,4 @@ mongodb:
     name: mongodb
     type: ClusterIP
     port: 27017
-    nodePort: "30018"
+    nodePort: "30017"
