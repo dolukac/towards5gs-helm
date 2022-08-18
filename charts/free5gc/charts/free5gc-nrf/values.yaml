@@ -1,19 +1,3 @@
-#
-# Software Name : towards5gs-helm
-# SPDX-FileCopyrightText: Copyright (c) 2021 Orange
-# SPDX-License-Identifier: Apache-2.0
-#
-# This software is distributed under the Apache License 2.0,
-# the text of which is available at https://github.com/Orange-OpenSource/towards5gs-helm/blob/main/LICENSE
-# or see the "LICENSE" file for more details.
-#
-# Author: Abderaouf KHICHANE, Ilhem FAJJARI, Ayoub BOUSSELMI
-# Software description: An open-source project providing Helm charts to deploy 5G components (Core + RAN) on top of Kubernetes
-#
-# Default values for free5gcControlPlane chart.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
-
 nameOverride: ""
 fullnameOverride: ""
 
@@ -39,7 +23,6 @@ initcontainers:
 
 db:
   enabled: true
-# This section can be used to override the default values in the MongoDB chart (remember MongoDB is a subchart of the free5gcControlplane chart since control plane NFs rely on it. 
 mongodb:
   fullnameOverride: "mongodb"
   useStatefulSet: true
@@ -66,7 +49,6 @@ nrf:
     name: nrf-volume
     mount: /free5gc/config/
   podAnnotations: {}
-    # additional annotations
   imagePullSecrets: []
   podSecurityContext: {}
   securityContext: {}
@@ -97,19 +79,13 @@ nrf:
     minReplicas: 1
     maxReplicas: 100
     targetCPUUtilizationPercentage: 80
-    # targetMemoryUtilizationPercentage: 80
   ingress:
     enabled: false
     annotations: {}
-      # kubernetes.io/ingress.class: nginx
-      # kubernetes.io/tls-acme: "true"
     hosts:
       - host: chart-example.local
         paths: []
     tls: []
-    #  - secretName: chart-example-tls
-    #    hosts:
-    #      - chart-example.local
   configuration:
     serviceNameList: |-
       - nnrf-nfm
