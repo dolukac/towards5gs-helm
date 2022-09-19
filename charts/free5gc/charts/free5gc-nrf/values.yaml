@@ -10,7 +10,7 @@ global:
       port: "8000"
       nodePort: "30800"
   sbi:
-    scheme: http
+    scheme: https
 
 initcontainers:
   curl:
